@@ -1,3 +1,4 @@
+import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import { isValidElement, type AnchorHTMLAttributes, type ReactNode } from "react";
 import { CopyBlock } from "./copy-block";
@@ -30,6 +31,23 @@ export function Anchor({ href = "", children, ...rest }: AnchorHTMLAttributes<HT
     >
       {children}
     </a>
+  );
+}
+
+/** Ảnh trong bài. Nhập ảnh bằng `import x from "./thu-muc/anh.jpg"` ở đầu file .mdx rồi dùng <Figure src={x} alt="..." />. */
+export function Figure({
+  src,
+  alt,
+  sizes = "(max-width: 640px) 90vw, 320px",
+}: {
+  src: StaticImageData;
+  alt: string;
+  sizes?: string;
+}) {
+  return (
+    <figure className="fig">
+      <Image src={src} alt={alt} sizes={sizes} placeholder="blur" />
+    </figure>
   );
 }
 

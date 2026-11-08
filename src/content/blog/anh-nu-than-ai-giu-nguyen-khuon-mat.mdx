@@ -1,0 +1,219 @@
+---
+title: "6 câu lệnh tạo ảnh nữ thần AI giữ nguyên khuôn mặt (copy dùng ngay)"
+description: "6 câu lệnh tạo ảnh nữ thần bằng AI mà vẫn giữ đúng khuôn mặt, chỉ làm đẹp nhẹ. Có ảnh trước/sau, câu sửa khi ảnh lệch mặt và bản nam thần."
+date: "2026-11-08"
+type: "Resource"
+tags: ["Prompt", "Tạo ảnh AI", "Nữ thần AI"]
+---
+
+import gocImg from "./anh-nu-than-ai-giu-nguyen-khuon-mat/00-nguoi-mau.jpg";
+import cauNganImg from "./anh-nu-than-ai-giu-nguyen-khuon-mat/thu-1-cau-ngan.jpg";
+import phuongDongImg from "./anh-nu-than-ai-giu-nguyen-khuon-mat/v2-3.1-phuong-dong.jpg";
+import matTroiImg from "./anh-nu-than-ai-giu-nguyen-khuon-mat/v2-3.2-mat-troi.jpg";
+import rungXanhImg from "./anh-nu-than-ai-giu-nguyen-khuon-mat/v2-3.3-rung-xanh.jpg";
+import tinhYeuImg from "./anh-nu-than-ai-giu-nguyen-khuon-mat/v2-3.4-tinh-yeu.jpg";
+import hyLapImg from "./anh-nu-than-ai-giu-nguyen-khuon-mat/v2-3.5-hy-lap.jpg";
+import bangTuyetImg from "./anh-nu-than-ai-giu-nguyen-khuon-mat/v2-3.6-bang-tuyet.jpg";
+
+{/*
+  Ảnh nằm trong thư mục cùng tên với bài. Còn thiếu:
+  - Link video ngắn (TikTok / YouTube Shorts): thêm vào cuối bài khi có. Link nên gắn UTM,
+    ví dụ ?utm_source=tiktok&utm_medium=video&utm_campaign=nu-than-ai.
+  - Ảnh chia sẻ riêng 1200x630 (og.png): hiện dùng ảnh tự tạo từ tiêu đề bài.
+*/}
+
+> "Người yêu tao đòi ảnh nữ thần, nhờ AI làm thì ra một cô xinh lắm… nhưng không phải người yêu tao."
+
+Đó là lỗi dễ gặp nhất với trend ảnh nữ thần: chỉ gõ "biến mình thành nữ thần" thì AI tự do vẽ lại cả khuôn mặt. Bài này có 6 câu lệnh mình đã chạy thử. Câu nào cũng dặn AI giữ đúng khuôn mặt trước, chỉ làm đẹp nhẹ, rồi mới đổi trang phục và bối cảnh.
+
+<Callout>
+Ảnh minh hoạ trong bài dùng người mẫu do AI tạo, không phải người thật.
+</Callout>
+
+## Trước và sau
+
+| Ảnh gốc | Câu lệnh ngắn | Câu lệnh trong bài |
+| --- | --- | --- |
+| <Figure src={gocImg} alt="Ảnh gốc: người mẫu do AI tạo" sizes="(max-width: 640px) 30vw, 230px" /> | <Figure src={cauNganImg} alt="Kết quả câu lệnh ngắn: ra tranh vẽ, mặt khác ảnh gốc" sizes="(max-width: 640px) 30vw, 230px" /> | <Figure src={phuongDongImg} alt="Kết quả câu lệnh trong bài: giữ đúng mặt" sizes="(max-width: 640px) 30vw, 230px" /> |
+| Ảnh selfie thẳng mặt, đủ sáng | `Biến mình trong ảnh này thành nữ thần.` Ảnh ra kiểu tranh vẽ, da bóng, mất nốt ruồi, tóc cũng đổi | Vẫn là khuôn mặt đó, có trang điểm nhẹ |
+
+## Cách dùng
+
+1. Mở một app AI tạo ảnh có cho tải ảnh lên. Mình chạy thử trên Google Flow (model Nano Banana). App khác có thể cho kết quả khác.
+2. Tải lên một ảnh chân dung: rõ nét, sáng đều, không che mặt, không ngược sáng.
+3. Dán nguyên một câu lệnh bên dưới rồi gửi.
+4. Chưa ưng thì gõ tiếp một câu sửa ở mục "Khi ảnh chưa ổn", trong cùng cuộc trò chuyện.
+
+## 6 câu lệnh
+
+### 1. Nguyệt Cung Tiên Tử · Moon Palace
+
+<Figure src={phuongDongImg} alt="Nguyệt Cung Tiên Tử: ảnh nữ thần phương đông tạo bằng AI, giữ nguyên khuôn mặt người mẫu" />
+
+```prompt
+Dùng người trong ảnh mình gửi làm mẫu.
+Giữ đúng khuôn mặt để người quen nhìn vẫn nhận ra: dáng mặt, mắt, mũi, môi và các nốt ruồi.
+Làm đẹp nhẹ như vừa được chuyên viên trang điểm chăm chút: da đều màu và sáng hơn một chút nhưng vẫn thấy vân da tự nhiên, tàn nhang mờ đi, lông mày tỉa gọn, mi cong, má hồng nhẹ, son môi hợp màu trang phục, tóc bóng mượt.
+Không đổi dáng mặt, không làm mắt to hơn, không gọt cằm, không làm da bóng như nhựa.
+Biến người này thành một nữ thần trong thần thoại phương Đông, đứng nghiêng nhẹ, ánh mắt nhìn thẳng ống kính.
+Áo lụa nhiều lớp màu trắng ngà và vàng nhạt, tay áo dài bay trong gió, trâm cài tóc bằng ngọc.
+Nền là biển mây và vầng trăng tròn.
+Ánh sáng dịu, tông trắng bạc pha vàng.
+Khung nửa người, mặt rõ nét và đủ lớn trong khung.
+Ảnh dọc 9:16, trông như ảnh chụp thật bằng máy ảnh, không phải tranh vẽ.
+Không thêm chữ, logo hay hình mờ.
+```
+
+**Bản nam thần:** đổi "nữ thần" thành "nam thần", thay phần trang phục bằng: áo bào lụa trắng ngà viền vàng, búi tóc cài ngọc, tay cầm quạt lông vũ.
+
+### 2. Thái Dương Nữ Hoàng · Solar Empress
+
+<Figure src={matTroiImg} alt="Thái Dương Nữ Hoàng: ảnh nữ thần mặt trời tạo bằng AI, giữ nguyên khuôn mặt người mẫu" />
+
+```prompt
+Dùng người trong ảnh mình gửi làm mẫu.
+Giữ đúng khuôn mặt để người quen nhìn vẫn nhận ra: dáng mặt, mắt, mũi, môi và các nốt ruồi.
+Làm đẹp nhẹ như vừa được chuyên viên trang điểm chăm chút: da đều màu và sáng hơn một chút nhưng vẫn thấy vân da tự nhiên, tàn nhang mờ đi, lông mày tỉa gọn, mi cong, má hồng nhẹ, son môi hợp màu trang phục, tóc bóng mượt.
+Không đổi dáng mặt, không làm mắt to hơn, không gọt cằm, không làm da bóng như nhựa.
+Biến người này thành nữ thần Mặt Trời, cằm hơi ngẩng, nét mặt tự tin.
+Váy lụa vàng ánh kim ôm người, vương miện vàng hình những tia nắng toả ra sau đầu.
+Nền là biển mây lúc bình minh.
+Ánh sáng giờ vàng chiếu từ phía sau, viền sáng quanh tóc và vai, tông cam vàng ấm.
+Khung nửa người, mặt rõ nét và đủ lớn trong khung.
+Ảnh dọc 9:16, trông như ảnh chụp thật bằng máy ảnh, không phải tranh vẽ.
+Không thêm chữ, logo hay hình mờ.
+```
+
+**Bản nam thần:** đổi "nữ thần" thành "nam thần", thay phần trang phục bằng: áo choàng đỏ cam, giáp ngực vàng mỏng có hoạ tiết mặt trời, vương miện tia nắng.
+
+### 3. Thanh Lâm Thần Nữ · Forest Muse
+
+<Figure src={rungXanhImg} alt="Thanh Lâm Thần Nữ: ảnh nữ thần rừng xanh tạo bằng AI, giữ nguyên khuôn mặt người mẫu" />
+
+```prompt
+Dùng người trong ảnh mình gửi làm mẫu.
+Giữ đúng khuôn mặt để người quen nhìn vẫn nhận ra: dáng mặt, mắt, mũi, môi và các nốt ruồi.
+Làm đẹp nhẹ như vừa được chuyên viên trang điểm chăm chút: da đều màu và sáng hơn một chút nhưng vẫn thấy vân da tự nhiên, tàn nhang mờ đi, lông mày tỉa gọn, mi cong, má hồng nhẹ, son môi hợp màu trang phục, tóc bóng mượt.
+Không đổi dáng mặt, không làm mắt to hơn, không gọt cằm, không làm da bóng như nhựa.
+Biến người này thành nữ thần Rừng Xanh, ngồi trên một rễ cây lớn phủ rêu, mỉm cười nhẹ.
+Váy kết từ lá xanh và hoa dại, vòng hoa trắng trên tóc, dây leo quấn quanh cổ tay.
+Nền là khu rừng cổ có sương sớm, đom đóm lơ lửng.
+Tia nắng xuyên qua tán lá, tông xanh rêu và trắng sữa.
+Khung nửa người, mặt rõ nét và đủ lớn trong khung.
+Ảnh dọc 9:16, trông như ảnh chụp thật bằng máy ảnh, không phải tranh vẽ.
+Không thêm chữ, logo hay hình mờ.
+```
+
+**Bản nam thần:** đổi "nữ thần" thành "nam thần", thay phần trang phục bằng: áo choàng màu rêu, vương miện kết từ cành cây và lá, tay cầm gậy gỗ.
+
+### 4. Vệ Nữ Hoa Hồng · Rose Venus
+
+<Figure src={tinhYeuImg} alt="Vệ Nữ Hoa Hồng: ảnh nữ thần tình yêu tạo bằng AI, giữ nguyên khuôn mặt người mẫu" />
+
+```prompt
+Dùng người trong ảnh mình gửi làm mẫu.
+Giữ đúng khuôn mặt để người quen nhìn vẫn nhận ra: dáng mặt, mắt, mũi, môi và các nốt ruồi.
+Làm đẹp nhẹ như vừa được chuyên viên trang điểm chăm chút: da đều màu và sáng hơn một chút nhưng vẫn thấy vân da tự nhiên, tàn nhang mờ đi, lông mày tỉa gọn, mi cong, má hồng nhẹ, son môi hợp màu trang phục, tóc bóng mượt.
+Không đổi dáng mặt, không làm mắt to hơn, không gọt cằm, không làm da bóng như nhựa.
+Biến người này thành nữ thần Tình Yêu, quay nửa người lại phía ống kính, ánh mắt dịu dàng.
+Váy voan hồng phấn nhiều lớp, cài hoa hồng trên tóc.
+Nền là vườn hồng lúc hoàng hôn, cánh hoa bay quanh người.
+Ánh sáng mềm, tông hồng đào và kem.
+Khung nửa người, mặt rõ nét và đủ lớn trong khung.
+Ảnh dọc 9:16, trông như ảnh chụp thật bằng máy ảnh, không phải tranh vẽ.
+Không thêm chữ, logo hay hình mờ.
+```
+
+**Bản nam thần:** đổi "nữ thần" thành "nam thần", thay phần trang phục bằng: sơ mi lụa trắng mở cổ, áo choàng đỏ rượu vang, cánh hoa hồng bay quanh.
+
+### 5. Thiên Hậu Olympus · Olympus Queen
+
+<Figure src={hyLapImg} alt="Thiên Hậu Olympus: ảnh nữ thần hy lạp tạo bằng AI, giữ nguyên khuôn mặt người mẫu" />
+
+```prompt
+Dùng người trong ảnh mình gửi làm mẫu.
+Giữ đúng khuôn mặt để người quen nhìn vẫn nhận ra: dáng mặt, mắt, mũi, môi và các nốt ruồi.
+Làm đẹp nhẹ như vừa được chuyên viên trang điểm chăm chút: da đều màu và sáng hơn một chút nhưng vẫn thấy vân da tự nhiên, tàn nhang mờ đi, lông mày tỉa gọn, mi cong, má hồng nhẹ, son môi hợp màu trang phục, tóc bóng mượt.
+Không đổi dáng mặt, không làm mắt to hơn, không gọt cằm, không làm da bóng như nhựa.
+Biến người này thành nữ thần Hy Lạp cổ đại, đứng thẳng, dáng uy nghi.
+Váy trắng xếp nếp, đai vàng ở eo, vòng nguyệt quế vàng trên tóc.
+Nền là hàng cột đá cẩm thạch trên vách núi nhìn ra biển xanh.
+Nắng trưa trong, tông trắng, xanh biển và vàng.
+Khung nửa người, mặt rõ nét và đủ lớn trong khung.
+Ảnh dọc 9:16, trông như ảnh chụp thật bằng máy ảnh, không phải tranh vẽ.
+Không thêm chữ, logo hay hình mờ.
+```
+
+**Bản nam thần:** đổi "nữ thần" thành "nam thần", thay phần trang phục bằng: áo choàng trắng vắt một vai, vòng nguyệt quế vàng, tay cầm cây thương.
+
+### 6. Hàn Băng Thánh Nữ · Snow Empress
+
+<Figure src={bangTuyetImg} alt="Hàn Băng Thánh Nữ: ảnh nữ thần băng tuyết tạo bằng AI, giữ nguyên khuôn mặt người mẫu" />
+
+```prompt
+Dùng người trong ảnh mình gửi làm mẫu.
+Giữ đúng khuôn mặt để người quen nhìn vẫn nhận ra: dáng mặt, mắt, mũi, môi và các nốt ruồi.
+Làm đẹp nhẹ như vừa được chuyên viên trang điểm chăm chút: da đều màu và sáng hơn một chút nhưng vẫn thấy vân da tự nhiên, tàn nhang mờ đi, lông mày tỉa gọn, mi cong, má hồng nhẹ, son môi hợp màu trang phục, tóc bóng mượt.
+Không đổi dáng mặt, không làm mắt to hơn, không gọt cằm, không làm da bóng như nhựa.
+Biến người này thành nữ thần Băng tuyết, đứng giữa bão tuyết nhẹ, ánh mắt bình thản.
+Váy xanh băng đính pha lê, áo choàng lông trắng, vương miện bằng băng.
+Nền là cung điện băng trong đêm.
+Ánh sáng lạnh màu xanh bạc, bông tuyết lơ lửng quanh người.
+Khung nửa người, mặt rõ nét và đủ lớn trong khung.
+Ảnh dọc 9:16, trông như ảnh chụp thật bằng máy ảnh, không phải tranh vẽ.
+Không thêm chữ, logo hay hình mờ.
+```
+
+**Bản nam thần:** đổi "nữ thần" thành "nam thần", thay phần trang phục bằng: áo khoác dài xanh đen có viền lông trắng, vương miện băng, tay cầm trượng băng.
+
+## Vì sao giữ được mặt
+
+Cả 6 câu lệnh có chung ba phần:
+
+1. **Dặn giữ mặt trước tiên.** Kể ra những gì không được đổi: dáng mặt, mắt, mũi, môi, nốt ruồi. Kèm những việc AI hay tự ý làm: làm mắt to hơn, gọt cằm, làm da bóng như nhựa.
+2. **Làm đẹp nhẹ có giới hạn.** Da sáng hơn một chút, lông mày gọn, son hợp trang phục. Không có câu này thì ảnh giữ đúng mặt nhưng trông mộc.
+3. **Khung nửa người.** Thiếu câu này, AI hay chọn ảnh toàn thân nên mặt rất nhỏ, phóng to lên là mờ.
+
+Mỗi câu lệnh mình chỉ chạy một lần trên một ảnh, nên đây chưa phải công thức chắc chắn. Với ảnh của bạn, kết quả có thể khác.
+
+## Khi ảnh chưa ổn
+
+Gõ tiếp vào cùng cuộc trò chuyện, đừng mở cuộc mới.
+
+### Mặt chưa giống
+
+```prompt
+Mặt trong ảnh vừa tạo chưa giống ảnh gốc. Giữ nguyên trang phục và bối cảnh, chỉ sửa khuôn mặt cho giống ảnh gốc hơn, nhất là mắt và khuôn miệng.
+```
+
+### Da mịn như nhựa
+
+```prompt
+Da đang mịn quá, trông như nhựa. Giữ lại vân da, lỗ chân lông và nốt ruồi như ảnh gốc. Không đổi gì khác.
+```
+
+### Mặt bị gọt thon
+
+```prompt
+Khuôn mặt bị làm thon hơn ảnh gốc. Trả lại đúng tỉ lệ khuôn mặt như ảnh gốc.
+```
+
+### Sai khung hình
+
+```prompt
+Giữ nguyên ảnh, chuyển sang khung dọc 9:16.
+```
+
+## Cẩn thận với app lạ
+
+Tải ảnh chân dung lên các ứng dụng tạo ảnh không rõ nguồn gốc có nguy cơ lộ dữ liệu. Ảnh khuôn mặt có thể bị thu thập để giả mạo tài khoản hoặc lừa đảo. Khác với mật khẩu, khuôn mặt thì không đổi được.
+
+Trước khi đưa ảnh mặt mình cho một app, hỏi 3 câu:
+
+1. **Ai làm app này?** Nhà phát triển trên CH Play hoặc App Store có phải công ty bạn biết không? App chỉ tải được qua link trong tin nhắn hay bình luận thì bỏ qua.
+2. **App đòi những gì?** Tạo ảnh chỉ cần một tấm. Đòi cả thư viện ảnh, danh bạ, số điện thoại hay đăng nhập Facebook là đòi quá nhiều.
+3. **Ảnh của bạn đi đâu?** Có tuỳ chọn xoá ảnh hoặc không cho dùng ảnh để huấn luyện AI không? Tìm không thấy thì coi như ảnh ở lại đó.
+
+App lớn cũng lưu ảnh theo điều khoản của họ. Những câu trên giúp giảm rủi ro chứ không loại bỏ được hẳn.
+
+Và đừng dùng ảnh của người khác khi họ chưa đồng ý, kể cả ảnh người yêu, và không dùng ảnh trẻ em.

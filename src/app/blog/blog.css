@@ -180,6 +180,7 @@
 }
 .prose table {
   width: 100%;
+  table-layout: fixed; /* chia đều cột, để ảnh trong bảng có cùng bề rộng */
   border-collapse: collapse;
   font-size: 0.95rem;
 }
@@ -240,6 +241,30 @@
   font-size: 0.95rem;
   line-height: 1.7;
   font-family: var(--f-body);
+}
+
+/* Ảnh trong bài: ảnh dọc 9:16 nên khống chế bề rộng để không quá dài, canh giữa. */
+.prose .fig {
+  margin: 1.6em auto;
+  max-width: 320px;
+}
+.prose .fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+}
+.prose td .fig,
+.prose th .fig {
+  margin: 0;
+  max-width: none;
+}
+.prose td {
+  vertical-align: top;
+}
+.prose td .fig img {
+  border-radius: 10px;
 }
 
 .callout {
