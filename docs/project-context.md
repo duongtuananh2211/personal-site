@@ -97,7 +97,17 @@ Lý do: nhiều app (Facebook, TikTok, Zalo) mở link trong trình duyệt riê
   - Lưu ý: gói Hobby chỉ dành cho mục đích **phi thương mại**. Nếu sau này site có thu nhập (quảng cáo, bán sản phẩm, nội dung tài trợ) thì phải lên gói Pro hoặc chuyển host.
   - Domain có thể vẫn quản lý DNS ở Cloudflare và trỏ về Vercel.
 
-Trạng thái hiện tại: mới khởi tạo từ `create-next-app`, chưa có trang nào ngoài trang mặc định.
+Trạng thái hiện tại: đã có trang chủ (profile), `/blog` và `/blog/[slug]` (bài viết MDX trong `src/content/blog`, file mẫu `_mau-bai-viet.mdx`), ảnh OG riêng cho từng bài, `sitemap.xml`, `robots.txt`. Chưa có bài nào được đăng. Chưa làm: newsletter, RSS, nút tải về cho resource có file đính kèm.
+
+### Biến môi trường
+
+Sao chép `.env.example` thành `.env.local` khi chạy máy cá nhân. Trên Vercel đặt ở Project Settings → Environment Variables. Biến `NEXT_PUBLIC_*` được nhúng vào lúc build, nên đổi giá trị xong phải deploy lại.
+
+| Biến | Dùng để | Bắt buộc |
+| --- | --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Địa chỉ gốc cho canonical, Open Graph, sitemap, robots (ví dụ `https://ten-mien.com`, không có dấu `/` ở cuối) | Có, trước khi chia sẻ link |
+| `NEXT_PUBLIC_UMAMI_WEBSITE_ID` | Bật đo traffic bằng Umami. Không đặt thì script không được tải | Có, nếu muốn đo |
+| `NEXT_PUBLIC_UMAMI_SRC` | Địa chỉ script Umami khi tự host. Mặc định là Umami Cloud | Không |
 
 ## 8. Quyết định đã chốt
 

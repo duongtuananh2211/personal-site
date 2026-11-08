@@ -1,0 +1,73 @@
+/* Style dùng chung cho thẻ bài viết: nạp ở cả trang chủ và trang blog. Bảng màu lấy từ globals.css. */
+
+/* Thẻ bài viết */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 20px;
+}
+.post-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: linear-gradient(150deg, var(--bg3), var(--bg2));
+  text-decoration: none;
+  transition:
+    border-color 0.25s,
+    transform 0.35s var(--ease);
+}
+.post-card:hover,
+.post-card:focus-visible {
+  border-color: var(--amber);
+  transform: translateY(-4px);
+}
+.post-type {
+  align-self: flex-start;
+  background: var(--amber);
+  color: #1a1203;
+  border-radius: 6px;
+  padding: 1px 10px;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+.post-card h3 {
+  margin: 4px 0 0;
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-variation-settings: "wdth" 88;
+  font-size: 1.45rem;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
+.post-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  flex: 1;
+}
+.post-meta {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Trang chủ: phần resource mới nhất */
+.latest-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px 24px;
+  margin-bottom: clamp(24px, 4vw, 40px);
+}
+.latest-all {
+  color: var(--aqua);
+  font-weight: 500;
+  text-decoration: none;
+}
+.latest-all:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
