@@ -74,8 +74,7 @@ export const profile = {
     },
     {
       id: "agilead-lms",
-      // CV ghi "June 2014 — 2015" nên chưa rõ mốc đúng; để trống năm cho đến khi xác nhận.
-      period: "Agilead Global",
+      period: "2019 — 2022",
       title: "Hệ thống quản lý học tập (LMS)",
       company: "Agilead Global",
       role: "Web Developer",
@@ -88,18 +87,18 @@ export const profile = {
   ] satisfies Project[],
   journey: [
     {
-      period: "Agilead Global",
-      title: "Dựng LMS trên Firebase",
-      role: "Web Developer",
-      description:
-        "Nền tảng học trực tuyến cho web, mobile và desktop, với database realtime và theo dõi tiến độ học viên.",
-    },
-    {
       period: "2019 — 2020",
       title: "Học Fullstack ở CodeGym",
       role: "Fullstack Developer",
       description:
         "Hệ thống hóa nền tảng fullstack để làm sản phẩm trọn vẹn từ giao diện đến backend.",
+    },
+    {
+      period: "2019 — 2022",
+      title: "Dựng LMS trên Firebase",
+      role: "Web Developer",
+      description:
+        "Nền tảng học trực tuyến cho web, mobile và desktop, với database realtime và theo dõi tiến độ học viên.",
     },
     {
       period: "09/2023 — 05/2026",
