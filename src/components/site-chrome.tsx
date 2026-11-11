@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { profile } from "@/content/profile";
+import { blogEnabled } from "@/lib/site";
 
 const clamp01 = (x: number) => Math.min(1, Math.max(0, x));
 
@@ -75,7 +76,9 @@ export function SiteChrome() {
           {profile.handle}
         </a>
         <div className="links">
-          {profile.nav.map((item) =>
+          {profile.nav
+            .filter((item) => blogEnabled || item.href !== "/blog")
+            .map((item) =>
             item.href.startsWith("/") ? (
               <Link key={item.href} href={item.href}>
                 {item.label}

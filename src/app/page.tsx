@@ -6,6 +6,7 @@ import { Journey } from "@/components/journey";
 import { Marquee } from "@/components/marquee";
 import { Projects } from "@/components/projects";
 import { SiteChrome } from "@/components/site-chrome";
+import { blogEnabled } from "@/lib/site";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
             <Marquee />
             <Projects />
             <Journey />
-            <LatestPosts />
+            {blogEnabled && <LatestPosts />}
           </main>
           <Contact />
         </div>

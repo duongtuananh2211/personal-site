@@ -1,8 +1,11 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { BlogHeader } from "@/components/blog/blog-header";
+import { blogEnabled } from "@/lib/site";
 import "./blog.css";
 
 export default function BlogLayout({ children }: { children: React.ReactNode }) {
+  if (!blogEnabled) notFound();
   return (
     <div className="blog-shell">
       <BlogHeader />

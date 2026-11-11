@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
-import { siteUrl } from "@/lib/site";
+import { blogEnabled, siteUrl } from "@/lib/site";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  if (!blogEnabled) return [{ url: siteUrl, priority: 1 }];
   const posts = await getAllPosts();
   return [
     { url: siteUrl, priority: 1 },
