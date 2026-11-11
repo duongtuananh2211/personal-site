@@ -202,7 +202,8 @@ button {
   will-change: transform, opacity;
   max-width: 1400px;
   width: 100%;
-  margin: 0 auto;
+  /* Đẩy cụm chữ ký lên khỏi đáy banner một chút. */
+  margin: 0 auto clamp(24px, 9vh, 110px);
 }
 .kicker {
   margin: 0 0 6px;
@@ -216,7 +217,7 @@ button {
   font-family: var(--f-sign);
   text-transform: lowercase;
   font-weight: 400;
-  font-size: clamp(7.5rem, min(28vw, 44vh), 22rem);
+  font-size: clamp(10.5rem, min(39.6vw, 61.6vh), 33rem);
   line-height: 1;
   user-select: none;
   -webkit-user-select: none;
@@ -1043,7 +1044,7 @@ h2 {
     white-space: nowrap;
   }
   .big {
-    font-size: min(50vw, 26rem);
+    font-size: min(66vw, 33rem);
   }
 }
 
