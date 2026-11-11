@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Be_Vietnam_Pro, Bricolage_Grotesque } from "next/font/google";
+import { Be_Vietnam_Pro, Bricolage_Grotesque, Kolker_Brush } from "next/font/google";
 import Script from "next/script";
 import { profile } from "@/content/profile";
 import { siteUrl } from "@/lib/site";
@@ -15,6 +15,14 @@ const display = Bricolage_Grotesque({
   variable: "--font-display",
   subsets: ["latin", "vietnamese"],
   axes: ["wdth", "opsz"],
+  display: "swap",
+});
+
+// Chữ ký "anhdt" ở banner và logo: nét bút lông.
+const sign = Kolker_Brush({
+  variable: "--font-sign",
+  subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
@@ -47,7 +55,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="vi" className={`${display.variable} ${body.variable}`}>
+    <html lang="vi" className={`${display.variable} ${body.variable} ${sign.variable}`}>
       <body>
         {children}
         {umamiId && (

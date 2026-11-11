@@ -1,19 +1,19 @@
 "use client";
 
-import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useRef, useState } from "react";
 import { profile } from "@/content/profile";
+import { HeroSignature } from "./hero-signature";
 import { TerrainCanvas } from "./terrain-canvas";
 
-const NAME = profile.handle.split("");
 // Lặp lại vai trò đầu ở cuối để vòng chạy chữ nối liền mạch.
 const ROLES = [...profile.roles, profile.roles[0]];
 const clamp01 = (x: number) => Math.min(1, Math.max(0, x));
+
 
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
   const glRef = useRef<HTMLDivElement>(null);
-  const letters = useRef<(HTMLSpanElement | null)[]>([]);
   const rollerRef = useRef<HTMLSpanElement>(null);
   const trackRef = useRef<HTMLSpanElement>(null);
   const [covered, setCovered] = useState(false);
@@ -39,75 +39,6 @@ export function Hero() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  // Đo độ rộng từng chữ ở nét đậm nhất để bố cục không nhảy khi nét đổi.
-  useEffect(() => {
-    const measure = () => {
-      const els = letters.current.filter((el): el is HTMLSpanElement => el !== null);
-      els.forEach((el) => {
-        el.style.width = "";
-        el.style.setProperty("--w", "800");
-      });
-      els.forEach((el) => {
-        el.style.width = `${el.getBoundingClientRect().width}px`;
-      });
-    };
-    let timer = 0;
-    const onResize = () => {
-      window.clearTimeout(timer);
-      timer = window.setTimeout(measure, 150);
-    };
-    document.fonts?.ready.then(measure);
-    window.addEventListener("resize", onResize);
-    return () => {
-      window.clearTimeout(timer);
-      window.removeEventListener("resize", onResize);
-    };
-  }, []);
-
-  // Tên đổi nét theo con trỏ (hoặc tự "thở" thành làn sóng khi không có chuột).
-  useEffect(() => {
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce || covered) return;
-    const state = NAME.map(() => 800);
-    const pointer = { x: 0, y: 0, at: -1e9 };
-    const onMove = (e: PointerEvent) => {
-      if (e.pointerType === "touch") return;
-      pointer.x = e.clientX;
-      pointer.y = e.clientY;
-      pointer.at = performance.now();
-    };
-    window.addEventListener("pointermove", onMove);
-    let raf = 0;
-    const frame = (ts: number) => {
-      const els = letters.current;
-      const rects = els.map((el) => el?.getBoundingClientRect() ?? null);
-      const hasPointer = performance.now() - pointer.at < 2500;
-      els.forEach((el, i) => {
-        const r = rects[i];
-        if (!el || !r) return;
-        let target: number;
-        if (hasPointer) {
-          const dx = pointer.x - (r.left + r.width / 2);
-          const dy = pointer.y - (r.top + r.height / 2);
-          const d = Math.hypot(dx, dy);
-          const k = Math.exp(-Math.pow(d / (Math.max(r.width, 60) * 1.1), 2));
-          target = 800 - k * 580;
-        } else {
-          target = 800 - ((Math.sin(ts / 900 - i * 0.8) + 1) / 2) * 430;
-        }
-        state[i] += (target - state[i]) * 0.12;
-        el.style.setProperty("--w", state[i].toFixed(1));
-        el.style.color = `color-mix(in srgb, var(--amber) ${(clamp01((800 - state[i]) / 580) * 100).toFixed(0)}%, var(--ink))`;
-      });
-      raf = requestAnimationFrame(frame);
-    };
-    raf = requestAnimationFrame(frame);
-    return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener("pointermove", onMove);
-    };
-  }, [covered]);
 
   // Dòng vai trò: chữ chạy dọc, nền vàng co giãn theo độ rộng từng vai trò.
   useEffect(() => {
@@ -162,20 +93,10 @@ export function Hero() {
         <p className="kicker">
           {profile.name} · {profile.location.split(",")[0]}
         </p>
-        <h1 className="big" aria-label={profile.handle}>
-          {NAME.map((ch, i) => (
-            <span className="mk" aria-hidden="true" key={i}>
-              <span
-                className="ch"
-                ref={(el) => {
-                  letters.current[i] = el;
-                }}
-                style={{ "--d": `${i * 90 + 200}ms` } as CSSProperties}
-              >
-                {ch}
-              </span>
-            </span>
-          ))}
+        {/* Chữ ký viết từng nét như người ký tay. */}
+        <h1 className="big">
+          <span className="sr">{profile.handle}</span>
+          <HeroSignature />
         </h1>
         <p className="roleline">
           <span className="sr">Mình là {profile.roles.join(", ")}.</span>

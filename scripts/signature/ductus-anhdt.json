@@ -1,0 +1,14 @@
+{
+  "_note": "Thứ tự và chiều viết (ductus) cho chữ 'anhdt', toạ độ theo viewBox do generate.mjs sinh ra. Mỗi nét là một lần đặt bút; các điểm mốc được bắt vào xương nét gần nhất rồi nối bằng đường ngắn nhất dọc theo xương.",
+  "strokes": [
+    { "name": "a: vòng bụng ngược chiều kim đồng hồ, lên đỉnh rồi kéo nét sổ", "points": [[116, 121], [48, 180], [131, 137], [117, 228]] },
+    { "name": "n: nét sổ", "points": [[163, 130], [153, 195]] },
+    { "name": "n: vòm và móc nối", "points": [[160, 172], [208, 151], [216, 196], [246, 190]] },
+    { "name": "h: nét cao", "points": [[338, 52], [249, 190]] },
+    { "name": "h: vòm và móc nối", "points": [[255, 172], [298, 156], [312, 182], [342, 183]] },
+    { "name": "d: vòng bụng", "points": [[420, 118], [348, 178], [372, 193], [410, 166]] },
+    { "name": "d: nét cao", "points": [[488, 52], [410, 166], [412, 222]] },
+    { "name": "t: thân và móc", "points": [[528, 68], [482, 114], [452, 208], [510, 160]] },
+    { "name": "t: gạch ngang", "points": [[443, 115], [538, 110]] }
+  ]
+}
