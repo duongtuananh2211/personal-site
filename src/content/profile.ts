@@ -124,8 +124,6 @@ export const profile = {
   ],
   contact: {
     email: "duongtuananh2211@gmail.com",
-    phone: "0398492365",
-    phoneDisplay: "0398 492 365",
   },
   nav: [
     { href: "#ve-minh", label: "Giới thiệu" },

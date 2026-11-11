@@ -21,13 +21,6 @@ export function Contact() {
               <CopyButton value={contact.email} event="copy-email" targetId="contact-email" />
             </li>
             <li>
-              <span className="k">Điện thoại</span>
-              <span className="v" id="contact-phone">
-                {contact.phoneDisplay}
-              </span>
-              <CopyButton value={contact.phone} event="copy-phone" targetId="contact-phone" />
-            </li>
-            <li>
               <span className="k">Nơi ở</span>
               <span className="v">{profile.location}</span>
               <span />
