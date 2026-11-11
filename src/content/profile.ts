@@ -124,6 +124,11 @@ export const profile = {
   ],
   contact: {
     email: "duongtuananh2211@gmail.com",
+  socials: [
+    { kind: "youtube", label: "YouTube", sub: "@laptrinhvienthoiai", url: "https://www.youtube.com/@laptrinhvienthoiai" },
+    { kind: "facebook", label: "Facebook", sub: "cá nhân", url: "https://www.facebook.com/anhduong22.11.01/" },
+    { kind: "facebook", label: "Fanpage", sub: "@devthoiai", url: "https://www.facebook.com/devthoiai/" },
+  ],
   },
   nav: [
     { href: "#ve-minh", label: "Giới thiệu" },

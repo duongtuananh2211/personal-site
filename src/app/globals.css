@@ -280,6 +280,74 @@ button {
   line-height: 1.3em;
   white-space: nowrap;
 }
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: clamp(14px, 2.4vw, 24px) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.soc {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(6, 20, 23, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    border-color 0.25s var(--ease),
+    background 0.25s var(--ease);
+}
+.soc:hover {
+  border-color: var(--amber);
+  background: rgba(6, 20, 23, 0.7);
+}
+.soc-ic {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+}
+.soc-youtube .soc-ic {
+  fill: #ff3d3d;
+}
+.soc-facebook .soc-ic {
+  fill: #1877f2;
+}
+.soc-ic .soc-in {
+  fill: #fff;
+}
+.soc-sub {
+  color: var(--muted);
+}
+.soc-arr {
+  color: var(--amber);
+  transition: transform 0.25s var(--ease);
+}
+.soc:hover .soc-arr {
+  transform: translate(2px, -2px);
+}
+@media (max-width: 600px) {
+  .socials {
+    gap: 8px;
+  }
+  .soc {
+    gap: 8px;
+    padding: 7px 13px 7px 9px;
+    font-size: 14px;
+  }
+  .soc-ic {
+    width: 20px;
+    height: 20px;
+  }
+}
 .hero-bot {
   position: relative;
   z-index: 1;

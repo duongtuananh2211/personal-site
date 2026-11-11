@@ -190,6 +190,35 @@ export function Hero() {
             </span>
           </span>
         </p>
+        <ul className="socials">
+          {profile.socials.map((s) => (
+            <li key={s.url}>
+              <a className={`soc soc-${s.kind}`} href={s.url} target="_blank" rel="noopener noreferrer">
+                {s.kind === "youtube" ? (
+                  <svg className="soc-ic" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8Z" />
+                    <path className="soc-in" d="m9.8 15.1 5.8-3.1-5.8-3.1v6.2Z" />
+                  </svg>
+                ) : (
+                  <svg className="soc-ic" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="11.5" />
+                    <path
+                      className="soc-in"
+                      d="M13.4 23.4v-8.2h2.8l.4-3.3h-3.2V9.8c0-.9.3-1.6 1.6-1.6h1.7V5.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.2v3.3H10v8.2c1.1.2 2.3.2 3.4 0Z"
+                    />
+                  </svg>
+                )}
+                <span>
+                  {s.label} <span className="soc-sub">{s.sub}</span>
+                </span>
+                <span className="soc-arr" aria-hidden="true">
+                  ↗
+                </span>
+                <span className="sr"> (mở tab mới)</span>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
       <div className="hero-bot">
         <a className="cue" href="#ve-minh">
