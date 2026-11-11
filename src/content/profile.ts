@@ -29,7 +29,7 @@ export const profile = {
   currentCompany: "Capi Việt Nam",
   title: "Web Developer",
   summary:
-    "Fullstack developer hơn 5 năm làm web, quen với Google Cloud và Microsoft Azure, từng dựng giải pháp thương mại điện tử và hệ thống mở rộng được. Đang chuyển hướng sang Product Owner.",
+    "Fullstack developer 6 năm làm web (từ 2020), quen với Google Cloud và Microsoft Azure, từng dựng giải pháp thương mại điện tử và hệ thống mở rộng được. Giờ tham gia quy trình sản xuất sản phẩm công nghệ, áp dụng AI để thay thế hoàn toàn công việc của Developer trước đây.",
   roles: [
     "Web Developer",
     "Fullstack Developer",
@@ -37,11 +37,10 @@ export const profile = {
     "Associate Product Owner",
   ],
   statement:
-    "Hơn 5 năm làm web, quen với Google Cloud và Microsoft Azure. Mình dựng thương mại điện tử, hệ thống mở rộng được, và giờ điều phối AI agent để đưa sản phẩm từ yêu cầu đến triển khai. Đang chuyển hướng sang Product Owner.",
+    "Làm web từ 2020, đến nay đã 6 năm, quen với Google Cloud và Microsoft Azure. Mình từng dựng thương mại điện tử và hệ thống mở rộng được. Giờ mình tham gia quy trình sản xuất sản phẩm công nghệ, áp dụng AI để thay thế hoàn toàn công việc của Developer trước đây.",
   stats: [
-    { value: 5, suffix: "+", label: "năm làm web" },
+    { value: 6, suffix: "", label: "năm làm web" },
     { value: 3, suffix: "", label: "công ty đã đồng hành" },
-    { value: 2, suffix: "", label: "CLB bóng đá Nhật làm website" },
   ],
   skills: {
     solid: ["Next.js", "NestJS", "Microsoft Azure", "Google Cloud", "Firebase", "Shopify"],
@@ -74,7 +73,7 @@ export const profile = {
     },
     {
       id: "agilead-lms",
-      period: "2019 — 2022",
+      period: "2020 — 2022",
       title: "Hệ thống quản lý học tập (LMS)",
       company: "Agilead Global",
       role: "Web Developer",
@@ -94,7 +93,7 @@ export const profile = {
         "Hệ thống hóa nền tảng fullstack để làm sản phẩm trọn vẹn từ giao diện đến backend.",
     },
     {
-      period: "2019 — 2022",
+      period: "2020 — 2022",
       title: "Dựng LMS trên Firebase",
       role: "Web Developer",
       description:
@@ -124,12 +123,12 @@ export const profile = {
   ],
   contact: {
     email: "duongtuananh2211@gmail.com",
+  },
   socials: [
     { kind: "youtube", label: "YouTube", sub: "@laptrinhvienthoiai", url: "https://www.youtube.com/@laptrinhvienthoiai" },
     { kind: "facebook", label: "Facebook", sub: "cá nhân", url: "https://www.facebook.com/anhduong22.11.01/" },
     { kind: "facebook", label: "Fanpage", sub: "@devthoiai", url: "https://www.facebook.com/devthoiai/" },
   ],
-  },
   nav: [
     { href: "#ve-minh", label: "Giới thiệu" },
     { href: "#du-an", label: "Dự án" },
