@@ -2,7 +2,7 @@ import type { CSSProperties } from "react";
 import { profile } from "@/content/profile";
 import { ProjectCard } from "./project-card";
 
-/** Ba thẻ dự án xếp chồng khi cuộn (sticky). Trên điện thoại các thẻ xếp thường. */
+/** Các thẻ dự án xếp chồng khi cuộn (sticky). Trên điện thoại các thẻ xếp thường. */
 export function Projects() {
   return (
     <section className="wrap block" id="du-an">

@@ -343,6 +343,12 @@ button {
 .soc-facebook .soc-ic {
   fill: #1877f2;
 }
+.soc-hoantien .soc-ic {
+  fill: #08804a;
+}
+.soc-ic .soc-st {
+  stroke: #fff;
+}
 .soc-ic .soc-in {
   fill: #fff;
 }
@@ -679,6 +685,29 @@ h2 {
   margin-top: 6px;
   font-size: 13px;
   font-weight: 600;
+}
+.work .w-link {
+  align-self: flex-start;
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: 1px solid color-mix(in srgb, var(--c) 55%, transparent);
+  border-radius: 999px;
+  color: var(--c);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+.work .w-link:hover,
+.work .w-link:focus-visible {
+  background: var(--c);
+  color: var(--bg);
+}
+.t-pct {
+  fill: var(--c);
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-size: 15px;
 }
 .thumb {
   height: clamp(200px, 26vw, 260px);

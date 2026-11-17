@@ -32,6 +32,19 @@ export function ProjectCard({ project }: { project: Project }) {
         </p>
         <p>{project.description}</p>
         <span className="tech">{project.tech}</span>
+        {project.link && (
+          <a
+            className="w-link"
+            href={project.link.href}
+            target="_blank"
+            rel="noopener"
+            data-umami-event="click-external-link"
+            data-umami-event-url={project.link.href}
+          >
+            {project.link.label}
+            <span aria-hidden="true"> ↗</span>
+          </a>
+        )}
       </div>
       <div className="thumb">
         <ProjectThumb kind={project.thumb} />

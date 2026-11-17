@@ -16,6 +16,25 @@ export function ProjectThumb({ kind }: { kind: ThumbKind }) {
       </svg>
     );
   }
+  if (kind === "cashback") {
+    // Đơn hàng đi sang sàn, đồng xu quay về ví.
+    const back = "M150 76 C120 108 80 108 50 76";
+    return (
+      <svg viewBox="0 0 200 120" aria-hidden="true">
+        <rect x="22" y="38" width="56" height="44" rx="6" fill="none" stroke="#E9EFEA" strokeOpacity=".45" strokeWidth="1.6" />
+        <path className="t-line" d="M22 50 H78" />
+        <circle className="t-i" cx="64" cy="66" r="4" />
+        <rect className="t-node" x="122" y="38" width="56" height="44" rx="6" />
+        <path className="t-line" d="M136 52 H164 M136 62 H158 M136 72 H150" />
+        <path className="t-line" d="M84 48 H116" strokeDasharray="3 5" />
+        <path className="t-line" d={back} strokeDasharray="3 5" />
+        <circle className="t-c" r="7">
+          <animateMotion dur="2.6s" repeatCount="indefinite" path={back} />
+        </circle>
+        <text className="t-pct" x="100" y="28" textAnchor="middle">1–5%</text>
+      </svg>
+    );
+  }
   if (kind === "storefront") {
     return (
       <svg viewBox="0 0 200 120" aria-hidden="true">

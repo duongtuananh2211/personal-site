@@ -120,6 +120,19 @@ export function Hero() {
                     <path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8Z" />
                     <path className="soc-in" d="m9.8 15.1 5.8-3.1-5.8-3.1v6.2Z" />
                   </svg>
+                ) : s.kind === "hoantien" ? (
+                  // Logo của app Hoàn Tiền: mũi tên vòng quanh ký hiệu đồng.
+                  <svg className="soc-ic" viewBox="0 0 100 100" aria-hidden="true">
+                    <rect width="100" height="100" rx="26" />
+                    <g className="soc-st" fill="none" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M75.98 35A30 30 0 1 0 75.98 65" />
+                      <polyline points="64.69,66.56 78.98,59.8 80.27,75.56" />
+                    </g>
+                    <g className="soc-st" fill="none" strokeWidth="6" strokeLinecap="round" transform="translate(48 50) scale(0.85) translate(-50.5 -50)">
+                      <circle cx="48" cy="52.5" r="9" />
+                      <path d="M57 30V61.5M52 35H62M40 70H58" />
+                    </g>
+                  </svg>
                 ) : (
                   <svg className="soc-ic" viewBox="0 0 24 24" aria-hidden="true">
                     <circle cx="12" cy="12" r="11.5" />

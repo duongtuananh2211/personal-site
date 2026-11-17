@@ -1,7 +1,7 @@
 // Nội dung hồ sơ, lấy từ CV. Sửa ở đây, giao diện tự cập nhật.
 
 export type Accent = "aqua" | "amber" | "coral";
-export type ThumbKind = "workflow" | "storefront" | "lms";
+export type ThumbKind = "workflow" | "storefront" | "lms" | "cashback";
 
 export type Project = {
   id: string;
@@ -13,6 +13,8 @@ export type Project = {
   tech: string;
   accent: Accent;
   thumb: ThumbKind;
+  /** Link ra sản phẩm đang chạy, nếu có. */
+  link?: { href: string; label: string };
 };
 
 export type JourneyItem = {
@@ -47,6 +49,19 @@ export const profile = {
     outline: ["AI Skills", "BMAD Method", "Agile Collaboration", "microCMS", "SEO", "Product thinking"],
   },
   projects: [
+    {
+      id: "hoan-tien",
+      period: "2026 — nay",
+      title: "App hoàn tiền khi mua sắm online",
+      company: "Hoàn Tiền (sản phẩm cá nhân)",
+      role: "Tự làm từ ý tưởng đến vận hành",
+      description:
+        "Web app giúp người mua trên Shopee và TikTok Shop nhận lại khoảng 1–5% giá trị đơn. Đăng nhập bằng email hoặc Google, dán link sản phẩm để lấy link mua riêng, mua qua link đó rồi theo dõi từng đơn từ lúc chờ duyệt đến khi rút tiền về ngân hàng.",
+      tech: "Web app · Shopee · TikTok Shop · Affiliate",
+      accent: "amber",
+      thumb: "cashback",
+      link: { href: "https://hoantien.duongtuananh.com", label: "hoantien.duongtuananh.com" },
+    },
     {
       id: "capi-logistics",
       period: "06/2026 — nay",
@@ -128,6 +143,7 @@ export const profile = {
     { kind: "youtube", label: "YouTube", sub: "@laptrinhvienthoiai", url: "https://www.youtube.com/@laptrinhvienthoiai" },
     { kind: "facebook", label: "Facebook", sub: "cá nhân", url: "https://www.facebook.com/anhduong22.11.01/" },
     { kind: "facebook", label: "Fanpage", sub: "@devthoiai", url: "https://www.facebook.com/devthoiai/" },
+    { kind: "hoantien", label: "Hoàn Tiền", sub: "hoàn 1–5% đơn hàng", url: "https://hoantien.duongtuananh.com" },
   ],
   nav: [
     { href: "#ve-minh", label: "Giới thiệu" },
